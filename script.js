@@ -116,10 +116,23 @@ function ProvdeData() {
 // name as the key and the property value as the value. The function should also retrieve the object from localStorage
 //and return it as a new object.
 
+let prevStudentsData = localStorage.getItem("studentsNine");
 
-
-
-
+let studentsNine = prevStudentsData ? JSON.parse(prevStudentsData): [];
+function ProvdeData1() {
+    let student3 = {
+    name: prompt("Enter your name"),
+    age: +prompt("Enter your age"),
+    class: prompt("Enter your class"),
+    teacher: prompt("Enter your teacher name"),
+    subjects: prompt("Enter your subjects"),
+    schoolTiming: +prompt("Enter your school timing"),
+} 
+    students.push(student3);
+    console.log(studentsNine);
+    let stringify = JSON.stringify(students);
+    localStorage.setItem("studentsNine", stringify);
+};
 
 
 
