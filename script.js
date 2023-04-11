@@ -78,6 +78,47 @@ yourPara.style.backgroundColor= "#000"
 console.log(yourPara);
 
 
+//// 6. Write a function that saves an object to localStorage. The function should take two arguments: the first argument 
+//is a string representing the key to use for storing the object, and the second argument is the object to store.
+
+let student1 = {
+    name: "Saqib",
+    age: 15,
+    class: "ninth",
+    teacher: "Umair",
+    subjects: "Math, Physics",
+    schoolTiming: 7.15,
+};
+
+console.log(student1);
+
+localStorage.setItem("name", "Saqib");
+
+//// Write a function that retrieves an object from localStorage. The function should take one argument,
+// which is a string representing the key used to store the object. The function should return the object.
+let students = [];
+function ProvdeData() {
+    let student2 = {
+    name: prompt("Enter your name"),
+    age: +prompt("Enter your age"),
+    class: prompt("Enter your class"),
+    teacher: prompt("Enter your teacher name"),
+    subjects: prompt("Enter your subjects"),
+    schoolTiming: +prompt("Enter your school timing"),
+} 
+    students.push(student2);
+    console.log(students);
+    let stringify = JSON.stringify(students);
+    localStorage.setItem("students", stringify);
+};
+
+//// 8. Write a function that takes an object and saves each property to localStorage using the property 
+// name as the key and the property value as the value. The function should also retrieve the object from localStorage
+//and return it as a new object.
+
+
+
+
 
 
 
